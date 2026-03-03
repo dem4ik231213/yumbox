@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0D0000;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0000;
+}
+::-webkit-scrollbar-thumb {
+  background: #F5A623;
+  border-radius: 3px;
+}
+
+/* Hero text animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.animate-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.animate-delay-2 { animation-delay: 0.25s; opacity: 0; }
+.animate-delay-3 { animation-delay: 0.4s; opacity: 0; }
+
+/* Card hover */
+.product-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(245, 166, 35, 0.2);
+}
+
+/* Orange glow button */
+.btn-orange {
+  background: #F5A623;
+  color: #000;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 999px;
+  transition: background 0.2s ease, transform 0.15s ease;
+  cursor: pointer;
+  border: none;
+}
+.btn-orange:hover {
+  background: #e09520;
+  transform: scale(1.03);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #F5A623;
+  border: 1.5px solid #F5A623;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.btn-outline:hover {
+  background: #F5A623;
+  color: #000;
+}
